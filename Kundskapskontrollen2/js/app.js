@@ -1,13 +1,13 @@
-let wins = 1;
-let losses = 1;
-let draws = 1;
+let wins = 0;
+let losses= 0;
+let draws = 0;
 
 document.getElementById("button0").addEventListener("click", () => {
   const playerRoll = Math.floor(Math.random() * 6) + 1;
   const aiRoll = Math.floor(Math.random() * 6) + 1;
 
-  document.getElementById("playerResult").textContent = `playerRoll: ${playerRoll}`;
-  document.getElementById("aiResult").textContent = `aiRoll: ${aiRoll}`;
+  document.getElementById("playerResult").textContent = `Player Roll: ${playerRoll}`;
+  document.getElementById("aiResult").textContent = `AI Roll: ${aiRoll}`;
 
   let result = "";
 

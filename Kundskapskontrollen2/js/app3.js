@@ -1,4 +1,4 @@
-
+/
 
 let wins = 0;
 let losses= 0;
@@ -9,7 +9,7 @@ let button0 = document.getElementById("button0");
 button0.addEventListener("click", function () {
   playerRoll ();
   aiRoll ();
-  resultOfGame ();
+  resultOfGame (playerRoll, aiRoll);
 
   document.getElementById("playerResult").textContent = `Your Roll: ${playerRoll}`;
   document.getElementById("aiResult").textContent = `AI Roll: ${aiRoll}`;
@@ -39,3 +39,8 @@ function resultOfGame () {
   }
 }
 
+/*
+for (let i = 0; i < 7; i++) {
+ console.log(playerRoll + aiRoll);
+}
+*/

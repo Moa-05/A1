@@ -1,3 +1,95 @@
+/*
+// VARIBLES
+//BUTTON
+let button0 = document.getElementById("button0");
+
+//TEXT
+let playerRollText = document.getElementById("playerRollText");
+let aiRollText = document.getElementById("aiRollText");
+let resultText = document.getElementById("result");
+let playerScoreText = document.getElementById("playerScoreText");
+let aiScoreText = document.getElementById("aiScoreText");
+
+//DATA
+let playerRoll = 0;
+let aiRoll = 0;
+let playerScore = 0;
+let aiScore = 0;
+let  drawScore = 0;
+
+//PROCESS
+button0.addEventListener("click", function () {
+  showPlayerRollResult1();
+  showAiRollResult2();
+
+  if (playerRoll > aiRoll) {
+    resultText.innerHTML = "YOU WIN!";
+    playerScore++;
+  } else if (aiRoll < playerRoll) {
+    resultText.innerHTML = "YOU LOST!!";
+    aiScore++;
+  } else {
+    resultText.innerHTML = "DRAW!!";
+    drawScore++;
+  }
+
+  showPlayerRollResult();
+  showAiRollResult();
+  showPlayerScore();
+  showAiScore();
+
+
+});
+
+// CONTROLLERS
+function showPlayerRollResult1() {
+  playerRoll = Math.floor(Math.random() * 6) + 1;
+}
+
+
+
+
+//VIEWS
+
+
+function showPlayerRollResult() {
+  playerRollText.innerHTML = "Player result: " + playerRoll;
+}
+
+function showAiRollResult() {
+  aiRollText.innerHTML = "AI result: " + aiRoll;
+}
+
+function showPlayerScore() {
+  playerScoreText.innerHTML = "player score: " + playerScore;
+}
+
+function showAiScore() {
+  aiScoreText.innerHTML = "AI score: " + aiScore;
+}
+
+
+
+function showAiRollResult2() {
+  aiRoll = Math.floor(Math.random() * 6) + 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 let wins = 0;
@@ -40,7 +132,7 @@ document.getElementById("button0").addEventListener("click", () => {
 
 
 
-/*
+
 function showPlayerRollResult() {
   let roll = Math.floor(Math.random() * 6) + 1;
   document.getElementById("playerResult").textContent = `Your Roll: ${roll}`;

@@ -1,4 +1,4 @@
-
+/*
 //DATA
 let wins = 0;
 let losses = 0;
@@ -42,6 +42,6 @@ function resultOfGame(playerRoll, aiRoll) {
     draws++;
   }
 }
-
+*/
 
 

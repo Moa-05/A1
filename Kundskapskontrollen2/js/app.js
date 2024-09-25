@@ -1,4 +1,5 @@
 
+/*
 //DATA
 let wins = 0;
 let losses = 0;
@@ -43,3 +44,8 @@ function resultOfGame(playerRoll, aiRoll) {
   }
 }
 
+<p id="playerResult"></p>
+<p id="aiResult"></p>
+<p id="gameResult"></p>
+<p id="score"> Win: 0 | Lost: 0 | Draw: 0</p>
+*/

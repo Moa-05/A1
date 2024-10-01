@@ -1,51 +1,46 @@
 
-/*
-//DATA
-let wins = 0;
-let losses = 0;
-let draws = 0;
-let result = "";
-
-//TEXT
+// VARIBLES
+//BUTTON
 let button0 = document.getElementById("button0");
 
-//PROCESS/BUTTON(
+//TEXT
+let playerRollText = document.getElementById("playerRollText");
+let aiRollText = document.getElementById("aiRollText");
+let resultText = document.getElementById("result");
+
+//DATA
+let playerRoll = 0;
+let aiRoll = 0;
+let playerScore = 0;
+let aiScore = 0;
+let drawScore = 0;
+
+//PROCESS
 button0.addEventListener("click", function () {
-  let playerRollValue = playerRoll();
-  let aiRollValue = aiRoll();
-  resultOfGame(playerRollValue, aiRollValue);
-//VIEWS
-  document.getElementById("playerResult").textContent = `Your Roll: ${playerRollValue}`;
-  document.getElementById("aiResult").textContent = `AI Roll: ${aiRollValue}`;
-  document.getElementById("gameResult").textContent = result;
-  document.getElementById("score").textContent = `Win = ${wins} | Lost = ${losses} | Draw = ${draws}`;
-});
-///)
+  showPlayerRollResult();
+  showAiRollResult();
 
-//CONTROLLERS
-function playerRoll() {
-  return Math.floor(Math.random() * 6) + 1;
-}
-
-function aiRoll() {
-  return Math.floor(Math.random() * 6) + 1;
-}
-
-function resultOfGame(playerRoll, aiRoll) {
   if (playerRoll > aiRoll) {
-    result = "YOU WIN!!";
-    wins++;
-  } else if (playerRoll < aiRoll) {
-    result = "YOU LOST! :(";
-    losses++;
+    resultText.innerHTML = "YOU WIN!";
+    playerScore++;
+  } else if (aiRoll > playerRoll) {
+    resultText.innerHTML = "YOU LOST!! :(";
+    aiScore++;
   } else {
-    result = "DRAW!";
-    draws++;
+    resultText.innerHTML = "DRAW";
+    drawScore++;
   }
+
+  resultText.innerHTML += `<br> You Win: ${playerScore} | AI Win: ${aiScore} | Draw: ${drawScore}`;
+});
+
+// CONTROLLERS
+function showPlayerRollResult() {
+  playerRoll = Math.floor(Math.random() * 6) + 1;
+  playerRollText.innerHTML = `Your Roll: ${playerRoll}`;
 }
 
-<p id="playerResult"></p>
-<p id="aiResult"></p>
-<p id="gameResult"></p>
-<p id="score"> Win: 0 | Lost: 0 | Draw: 0</p>
-*/
+function showAiRollResult() {
+  aiRoll = Math.floor(Math.random() * 6) + 1;
+  aiRollText.innerHTML = `AI Roll: ${aiRoll}`;
+}
